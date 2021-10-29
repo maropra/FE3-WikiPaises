@@ -7,10 +7,10 @@ export default function Footer() {
             <div className="footer-container">
                 <span>Ⓒ2021 - Mar Opradolce</span>
                 <div className="redes">
-                    <i class="fab fa-github"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fas fa-coffee"></i>
+                    <a href="https://github.com/maropra" target="_blank"><i class="fab fa-github" /></a>
+                    <a href="https://www.linkedin.com/in/mar-opradolce-213456184/" target="_blank"><i class="fab fa-linkedin-in" /></a>
+                    <a href="https://www.instagram.com/maropradolce/" target="_blank"><i class="fab fa-instagram" /></a>
+                    <a href="https://maropra.github.io/" target="_blank"><i class="fas fa-coffee" /></a>
                 </div>
             </div>
         </footer>

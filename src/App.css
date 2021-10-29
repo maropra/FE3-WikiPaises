@@ -7,6 +7,14 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+:root{
+  --color-primario-oscuro: #14213d;
+  --color-acento: #fca311;
+  --color-acento-claro: #ffebca;
+  --color-secundario-oscuro: #4a4a50;
+  --color-secundario-claro: #dfdfe2;
+}
+
 .App{
   display: flex;
   flex-direction: column;

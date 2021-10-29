@@ -22,8 +22,8 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 5px solid rgba(0, 0, 0, 0.1);
-    border-left-color: rgb(255, 166, 0);
+    border: 5px solid var(--color-secundario-claro);
+    border-left-color: var(--color-acento);
     animation: spin 2s linear infinite;
 }
 
@@ -75,8 +75,33 @@
 }
 
 .tarjeta-pais .tarjeta-texto{
-    color: rgb(74, 74, 80);
+    color: var(--color-secundario-oscuro);
     font-size: 0.9rem;
+}
+
+.error{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.error i{
+    font-size: 4rem;
+    color: var(--color-secundario-claro);
+    
+}
+
+.not-found{
+    color: var(--color-secundario-ocuro);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
 }
 
 @media (max-width: 768px){

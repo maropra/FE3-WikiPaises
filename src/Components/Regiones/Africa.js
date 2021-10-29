@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-3";
 import useFetch from "../../Hooks/useFetch";
 import "./Regiones.css";
 
@@ -9,15 +10,17 @@ export default function Home() {
     const listadoPaises = paises.map(pais => {
         return (
             <div key={pais.cca2} className="tarjeta-pais">
-                <img src={pais.flags.png} alt={pais.name.common} />
-                <div className="tarjeta-info">
-                    <h3>{pais.name.common}</h3>
-                    <div className="tarjeta-texto">
-                        <p><strong>Region:</strong> {pais.subregion}</p>
-                        <p><strong>Capital:</strong> {pais.capital}</p>
-                        <p><strong>Población:</strong> {pais.population}</p>
+                <Link to={`/FichaPais/${pais.name.common}`}>
+                    <img src={pais.flags.png} alt={pais.name.common} />
+                    <div className="tarjeta-info">
+                        <h3>{pais.name.common}</h3>
+                        <div className="tarjeta-texto">
+                            <p><strong>Region:</strong> {pais.subregion}</p>
+                            <p><strong>Capital:</strong> {pais.capital}</p>
+                            <p><strong>Población:</strong> {pais.population}</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
         )
     })

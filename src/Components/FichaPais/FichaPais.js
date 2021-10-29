@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
+import { browserHistory } from "react-router-3";
 import useFetch from "../../Hooks/useFetch";
 import './FichaPais.css'
 
-export default function FichaPais() {
-    //let { pais } = useParams();
+export default function FichaPais(props) {
 
-    let pais1 = "dominica"
-    const url = "https://restcountries.com/v3.1/name/" + pais1
-    console.log("url:" + url);
+    const pais = props.params.pais;
+    const url = "https://restcountries.com/v3.1/name/" + pais
+
     const { paises, isLoading } = useFetch(url)
-    console.log("info pais")
-    console.log(paises)
+
+    const handleVolver = () => {
+        browserHistory.goBack()
+    }
 
     return (
         <main className="ficha-pais">
@@ -19,20 +20,21 @@ export default function FichaPais() {
                 <p>Cargando</p>
                 : (
                     <>
+                        <button className="btn-volver" onClick={handleVolver}>← Volver</button>
                         <img src={paises[0].flags.png} alt={paises[0].name.common} />
                         <div className="pais-info">
                             <h3>{paises[0].name.common}</h3>
                             <div className="pais-texto">
                                 <div>
-                                    <p>Nombre Oficial: {paises[0].name.official}</p>
-                                    <p>Region: {paises[0].region}</p>
-                                    <p>Sub Region: {paises[0].subregion}</p>
-                                    <p>Capital: {paises[0].capital}</p>
+                                    <p><strong>Nombre Oficial:</strong> {paises[0].name.official}</p>
+                                    <p><strong>Region:</strong> {paises[0].region}</p>
+                                    <p><strong>Sub Region:</strong> {paises[0].subregion}</p>
+                                    <p><strong>Capital:</strong> {paises[0].capital}</p>
                                 </div>
                                 <div>
-                                    <p>Poblacion: {paises[0].population}</p>
-                                    <p>Area:{paises[0].area} </p>
-                                    <p>Independizado: {paises[0].independent ? "SI" : "NO"}</p>
+                                    <p><strong>Poblacion:</strong> {paises[0].population}</p>
+                                    <p><strong>Area:</strong>{paises[0].area} </p>
+                                    <p><strong>Independizado:</strong> {paises[0].independent ? "SI" : "NO"}</p>
                                 </div>
 
                             </div>

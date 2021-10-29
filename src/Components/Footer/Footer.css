@@ -1,5 +1,5 @@
 footer{
-    background:#000;
+    background:var(--color-primario-oscuro);
     padding: 0.5rem 0;
     width: 100%;
     color: white;
@@ -19,6 +19,11 @@ footer{
     display: flex;
     gap: 3rem;
     font-size: 1rem;
+}
+
+.footer-container .redes a{
+    color: white;
+    text-decoration: none;
 }
 
 @media(max-width: 550px){

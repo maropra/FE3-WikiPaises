@@ -3,7 +3,7 @@ import useFetch from "../../Hooks/useFetch";
 import "./Regiones.css";
 import { Link } from "react-router-3";
 
-export default function America() {
+function America() {
     const { paises, isLoading } = useFetch("https://restcountries.com/v3.1/region/america");
 
     const listadoPaises = paises.map(pais => {
@@ -44,3 +44,4 @@ export default function America() {
 }
 
 
+export default America;

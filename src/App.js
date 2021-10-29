@@ -7,6 +7,7 @@ import Oceania from "./Components/Regiones/Oceania";
 import TemplateGeneral from "./Components/TemplateGeneral";
 import { Router, Route, browserHistory, IndexRoute } from 'react-router-3';
 import FichaPais from './Components/FichaPais/FichaPais';
+import ResultadosBusqueda from './Components/ResultadosBusqueda/ResultadosBusqueda';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Europa" component={Europa} />
           <Route path="/Oceania" component={Oceania} />
           <Route path="FichaPais/:pais" component={FichaPais} />
+          <Route path="BusquedaPais/:pais" component={ResultadosBusqueda} />
         </Route>
       </Router>
     </div>

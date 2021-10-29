@@ -5,9 +5,50 @@
     background-position: center center;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.buscador-container{
+    align-self: flex-start;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    color: white;
+    z-index: 2;
+
+}
+
+.buscador-container h3{
+    font-size: 2.5rem;
+    margin-bottom: 2rem ;
+}
+
+.buscador-container .buscador-bloque{
+    display: flex;
+    gap: 1rem;
+}
+
+.buscador-container .buscador-bloque input{
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.buscador-container .buscador-bloque .input-busqueda{
+    flex: 1 0 70%;
+}
+
+.buscador-container .buscador-bloque .input-busqueda:focus{
+    background-color: var(--color-acento-claro);
+}
+
+.buscador-container .buscador-bloque input[type="submit"]{
+    background-color: white;
+    flex: 30%;
+    font-size: 1rem;
 }
 
 .layer{
