@@ -1,0 +1,12 @@
+.ficha-pais{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ficha-pais .pais-texto{
+    display: flex;
+    gap: 2rem;
+}

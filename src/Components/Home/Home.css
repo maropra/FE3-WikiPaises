@@ -1,0 +1,47 @@
+.home-bg{
+    background-image: url("../../img/paises-fondo.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.home-container{
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    z-index: 2;
+}
+
+.home-container h2{
+    font-size: 2.5rem;
+}
+
+.home-container p{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 550px){
+    .home-container h2{
+        font-size: 1.5rem;
+    }
+    
+    .home-container p{
+        font-size: 1rem;
+    }
+}

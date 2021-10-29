@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from "./Components//Home/Home";
+import America from "./Components/Regiones/America";
+import Africa from "./Components/Regiones/Africa";
+import Europa from "./Components/Regiones/Europa";
+import Oceania from "./Components/Regiones/Oceania";
+import TemplateGeneral from "./Components/TemplateGeneral";
+import { Router, Route, browserHistory, IndexRoute } from 'react-router-3';
+import FichaPais from './Components/FichaPais/FichaPais';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router history={browserHistory}>
+        <Route path="/" component={TemplateGeneral}>
+          <IndexRoute component={Home} />
+          <Route path="/Africa" component={Africa} />
+          <Route path="/America" component={America} />
+          <Route path="/Europa" component={Europa} />
+          <Route path="/Oceania" component={Oceania} />
+          <Route path="FichaPais/:pais" component={FichaPais} />
+        </Route>
+      </Router>
     </div>
   );
 }
